@@ -1,11 +1,14 @@
-import Counter from "./count";
 import Link from "next/link";
+import ProductTable from "./components/ProductTable";
 
 export default function Page() {
     return (
         <div className="bg-white min-h-screen p-8">
-            <div className="max-w-[50%] mx-auto">
-                <div className="flex justify-end mb-8">
+            <div className="max-w-[90%] mx-auto">
+                <div className="flex justify-between items-center mb-8">
+                    <h1 className="text-3xl font-bold text-black">
+                        FakeStore Products
+                    </h1>
                     <Link
                         href="/"
                         className="bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700 transition-colors"
@@ -13,10 +16,8 @@ export default function Page() {
                         Home
                     </Link>
                 </div>
-                <div className="space-y-8">
-                    <Counter countBy={1} />
-                    <Counter countBy={2} />
-                </div>
+
+                <ProductTable />
             </div>
         </div>
     )
